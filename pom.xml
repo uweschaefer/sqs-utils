@@ -44,7 +44,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jackson.version>2.7.9</jackson.version>
 		<jmh.version>1.18</jmh.version>
-		<aws-sdk-sqs.version>1.11.786</aws-sdk-sqs.version>
+		<aws-sdk-sqs.version>1.11.797</aws-sdk-sqs.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<log4j.version>2.2</log4j.version>
 	</properties>
@@ -97,7 +97,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
+				<version>3.2.1</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
