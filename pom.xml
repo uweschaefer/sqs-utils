@@ -48,6 +48,8 @@
 		<aws-sdk-sqs.version>1.11.870</aws-sdk-sqs.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<log4j.version>2.2</log4j.version>
+		<spotless-maven-plugin.version>2.4.1</spotless-maven-plugin.version>
+
 	</properties>
 	<developers>
 		<developer>
@@ -150,6 +152,36 @@
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>4.3.0</version>
+			</plugin>
+			<plugin>
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>${spotless-maven-plugin.version}</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<java>
+						<trimTrailingWhitespace/>
+						<removeUnusedImports/>
+						<googleJavaFormat>
+							<version>1.7</version> <!-- optional -->
+							<style>GOOGLE</style>  <!-- or AOSP (optional) -->
+						</googleJavaFormat>
+						<includes>
+							<include>**/src/main/java/**/*.java
+							</include>
+							<include>**/src/test/java/**/*.java
+							</include>
+						</includes>
+					</java>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
