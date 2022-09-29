@@ -48,7 +48,7 @@
 		<aws-sdk-sqs.version>1.12.312</aws-sdk-sqs.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<log4j.version>2.2</log4j.version>
-		<spotless-maven-plugin.version>2.27.0</spotless-maven-plugin.version>
+		<spotless-maven-plugin.version>2.27.1</spotless-maven-plugin.version>
 
 	</properties>
 	<developers>
